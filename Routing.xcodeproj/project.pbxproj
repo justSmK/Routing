@@ -16,6 +16,8 @@
 		BBC493732A76F29400E5D6F7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC493722A76F29400E5D6F7 /* LoginViewController.swift */; };
 		BBC493762A76F4E200E5D6F7 /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC493752A76F4E200E5D6F7 /* TermsViewController.swift */; };
 		BBC493782A76F73200E5D6F7 /* AuthData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC493772A76F73200E5D6F7 /* AuthData.swift */; };
+		BBC4937B2A76FA1900E5D6F7 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC4937A2A76FA1900E5D6F7 /* Router.swift */; };
+		BBC4937D2A76FA3F00E5D6F7 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC4937C2A76FA3F00E5D6F7 /* MainRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		BBC493722A76F29400E5D6F7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BBC493752A76F4E200E5D6F7 /* TermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
 		BBC493772A76F73200E5D6F7 /* AuthData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthData.swift; sourceTree = "<group>"; };
+		BBC4937A2A76FA1900E5D6F7 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		BBC4937C2A76FA3F00E5D6F7 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 			children = (
 				BBC4936C2A76DC5100E5D6F7 /* Resources */,
 				BBC4936B2A76DC4B00E5D6F7 /* Application */,
+				BBC493792A76FA0F00E5D6F7 /* Router */,
 				BBC4936D2A76DCC600E5D6F7 /* Main */,
 				BBC4936E2A76F06D00E5D6F7 /* Demo */,
 				BBC493712A76F28700E5D6F7 /* Login */,
@@ -122,6 +127,15 @@
 				BBC493752A76F4E200E5D6F7 /* TermsViewController.swift */,
 			);
 			path = Terms;
+			sourceTree = "<group>";
+		};
+		BBC493792A76FA0F00E5D6F7 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				BBC4937A2A76FA1900E5D6F7 /* Router.swift */,
+				BBC4937C2A76FA3F00E5D6F7 /* MainRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBC4937B2A76FA1900E5D6F7 /* Router.swift in Sources */,
 				BBA012E32A76DBD300817956 /* ViewController.swift in Sources */,
 				BBA012DF2A76DBD300817956 /* AppDelegate.swift in Sources */,
 				BBA012E12A76DBD300817956 /* SceneDelegate.swift in Sources */,
@@ -201,6 +216,7 @@
 				BBC493732A76F29400E5D6F7 /* LoginViewController.swift in Sources */,
 				BBC493762A76F4E200E5D6F7 /* TermsViewController.swift in Sources */,
 				BBC493702A76F07900E5D6F7 /* DemoViewController.swift in Sources */,
+				BBC4937D2A76FA3F00E5D6F7 /* MainRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

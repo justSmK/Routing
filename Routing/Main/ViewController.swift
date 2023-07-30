@@ -49,6 +49,8 @@ class ViewController: UIViewController {
         button.addTarget(self, action: #selector(demoButtonTapped), for: .touchUpInside)
         return button
     }()
+    
+    private let router: MainRouter = Router.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,26 +67,20 @@ class ViewController: UIViewController {
     
     @objc
     private func loginButtonTapped(_ sender: UIButton) {
-        let loginViewController = LoginViewController()
         let authData = AuthData(login: "Login kek", password: "Password Lol")
-        loginViewController.configure(authData: authData)
-        navigationController?.pushViewController(loginViewController, animated: true)
+        router.showLogin(from: self, authData: authData)
     }
 
     @objc
     private func termsAndAgreementsButtonTapped(_ sender: UIButton) {
-        let termsViewController = TermsViewController()
-        termsViewController.configure(with: "EN")
-        navigationController?.pushViewController(termsViewController, animated: true)
+        let langData = "EN"
+        router.showTerms(from: self, langData: langData)
     }
     
     @objc
     private func demoButtonTapped(_ sender: UIButton) {
-        let demoViewController = DemoViewController()
-        demoViewController.configure(with: true)
-        demoViewController.modalPresentationStyle = .popover
-        demoViewController.modalTransitionStyle = .flipHorizontal
-        present(demoViewController, animated: true)
+        let shouldDismissAnimated = true
+        router.showDemo(from: self, shouldDismissAnimated: shouldDismissAnimated)
     }
 }
 
