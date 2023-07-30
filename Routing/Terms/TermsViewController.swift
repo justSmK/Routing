@@ -16,7 +16,11 @@ class TermsViewController: UIViewController {
         label.font = .systemFont(ofSize: 18)
         return label
     }()
-
+    
+    public func configure(with langCode: String) {
+        self.langCode = langCode
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,7 +31,14 @@ class TermsViewController: UIViewController {
     private func setupViews() {
         view.backgroundColor = .systemBackground
         view.addSubview(label)
+        
+        if let defaultTitle = label.text {
+            let newTitle = defaultTitle + " - " + langCode
+            label.text = newTitle
+        }
     }
+    
+    private var langCode: String = ""
 
 }
 

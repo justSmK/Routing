@@ -9,6 +9,8 @@ import UIKit
 
 class DemoViewController: UIViewController {
     
+    // MARK: UI
+    
     private lazy var label: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -30,12 +32,26 @@ class DemoViewController: UIViewController {
         return button
     }()
     
+    // MARK: - Private
+    
+    private var shouldDismissAnimated = true
+    
+    // MARK: - Public
+    
+    public func configure(with shouldDismissAnimated: Bool) {
+        self.shouldDismissAnimated = shouldDismissAnimated
+    }
+    
+    // MARK: - Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupViews()
         setupConstraints()
     }
+    
+    // MARK: - Private Methods
     
     private func setupViews() {
         view.backgroundColor = .systemBackground
@@ -45,8 +61,9 @@ class DemoViewController: UIViewController {
     
     @objc
     private func dismissButtonTapped(_ sender: UIButton) {
-        dismiss(animated: true)
+        dismiss(animated: shouldDismissAnimated)
     }
+
 }
 
 private extension DemoViewController {

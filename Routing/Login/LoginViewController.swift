@@ -22,6 +22,8 @@ class LoginViewController: UIViewController {
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.placeholder = "Password"
         textField.textAlignment = .center
+        textField.isSecureTextEntry = true
+        
         return textField
     }()
     
@@ -37,6 +39,14 @@ class LoginViewController: UIViewController {
         button.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
         return button
     }()
+    
+    private var defaultLogin: String = ""
+    private var defaultPassword: String = ""
+    
+    public func configure(authData: AuthData) {
+        defaultLogin = authData.login
+        defaultPassword = authData.password
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +60,9 @@ class LoginViewController: UIViewController {
         view.addSubview(loginTextField)
         view.addSubview(passwordTextField)
         view.addSubview(loginButton)
+        
+        loginTextField.text = defaultLogin
+        passwordTextField.text = defaultPassword
     }
     
     @objc

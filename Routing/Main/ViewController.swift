@@ -66,18 +66,22 @@ class ViewController: UIViewController {
     @objc
     private func loginButtonTapped(_ sender: UIButton) {
         let loginViewController = LoginViewController()
+        let authData = AuthData(login: "Login kek", password: "Password Lol")
+        loginViewController.configure(authData: authData)
         navigationController?.pushViewController(loginViewController, animated: true)
     }
 
     @objc
     private func termsAndAgreementsButtonTapped(_ sender: UIButton) {
         let termsViewController = TermsViewController()
+        termsViewController.configure(with: "EN")
         navigationController?.pushViewController(termsViewController, animated: true)
     }
     
     @objc
     private func demoButtonTapped(_ sender: UIButton) {
         let demoViewController = DemoViewController()
+        demoViewController.configure(with: true)
         demoViewController.modalPresentationStyle = .popover
         demoViewController.modalTransitionStyle = .flipHorizontal
         present(demoViewController, animated: true)

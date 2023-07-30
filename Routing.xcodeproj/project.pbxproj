@@ -15,6 +15,7 @@
 		BBC493702A76F07900E5D6F7 /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC4936F2A76F07900E5D6F7 /* DemoViewController.swift */; };
 		BBC493732A76F29400E5D6F7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC493722A76F29400E5D6F7 /* LoginViewController.swift */; };
 		BBC493762A76F4E200E5D6F7 /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC493752A76F4E200E5D6F7 /* TermsViewController.swift */; };
+		BBC493782A76F73200E5D6F7 /* AuthData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC493772A76F73200E5D6F7 /* AuthData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		BBC4936F2A76F07900E5D6F7 /* DemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
 		BBC493722A76F29400E5D6F7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BBC493752A76F4E200E5D6F7 /* TermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
+		BBC493772A76F73200E5D6F7 /* AuthData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				BBC493722A76F29400E5D6F7 /* LoginViewController.swift */,
+				BBC493772A76F73200E5D6F7 /* AuthData.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 				BBA012E32A76DBD300817956 /* ViewController.swift in Sources */,
 				BBA012DF2A76DBD300817956 /* AppDelegate.swift in Sources */,
 				BBA012E12A76DBD300817956 /* SceneDelegate.swift in Sources */,
+				BBC493782A76F73200E5D6F7 /* AuthData.swift in Sources */,
 				BBC493732A76F29400E5D6F7 /* LoginViewController.swift in Sources */,
 				BBC493762A76F4E200E5D6F7 /* TermsViewController.swift in Sources */,
 				BBC493702A76F07900E5D6F7 /* DemoViewController.swift in Sources */,
